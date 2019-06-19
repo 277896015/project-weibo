@@ -1,0 +1,52 @@
+<%- include ./common/header.ejs  %>
+
+    <body>
+        <div class="container">
+
+            <div style="color:skyblue;font-size:30px;">
+                <%=data.nichen%>
+            </div>
+
+            <img class="touxiang" src="<%=data.touxiang%>" alt="">
+            <div class="row">
+                <div class="col-sm-10" style="margin-top:50px;">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+
+
+
+
+                        </div>
+                        <div class="panel-body">
+                            <div class="table-responsive input-form">
+                                <form action="http://localhost:4000/product/update/<%=data.id%>" method="post" enctype="multipart/form-data">
+                                    <ul>
+
+
+                                        <li>
+                                            原图片:
+                                            <img src="<%=data.blogpicture%>" alt="">
+                                        </li>
+                                        <li> 上传新图片: <input type="file" name="blogpicture" /></li>
+
+
+                                        <li>
+                                            博客内容:
+                                            <textarea name="blogtext" id="" cols="60" rows="8"><%=data.blogtext%></textarea>
+                                        </li>
+                                        <li>
+                                            <br />
+                                            <button type="submit" class="btn btn-default">提交</button>
+                                        </li>
+
+                                    </ul>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <%- include ./common/footer.ejs  %>
